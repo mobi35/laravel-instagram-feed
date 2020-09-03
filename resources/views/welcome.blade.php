@@ -82,9 +82,9 @@
             <div class="content">
                 <div class="title m-b-md">
 
-                    {{ $auth }}
+
                 <br>
-                <a href="{{$auth}}"> Authenticate </a>
+
                 </div>
 
                 <div class="links">

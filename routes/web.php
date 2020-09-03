@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/welcome', 'HomeController@authProfile')->name('welcome');
 
 
+Route::get('/', function (){
 
+    return view('welcome');
+
+});
 
 
 Auth::routes();
@@ -29,3 +33,11 @@ Route::get('/instagram', function () {
 
     return view('instagram',['instagrams' => $auth]);
 });
+
+Auth::routes();
+
+Route::get('/home', function() {
+    return view('home');
+});
+
+Route::post('upload', 'UserController@uploadAvater');

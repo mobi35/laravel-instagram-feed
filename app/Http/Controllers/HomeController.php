@@ -16,16 +16,6 @@ class HomeController extends Controller
 
     }
 
-    public function authProfile(){
-        $profile = \Dymantic\InstagramFeed\Profile::where('username', 'adrianradores')->first();
-        $auth = $profile->getInstagramAuthUrl();
-
-        return view('welcome', ['auth' => $auth]);
-
-    }
-
-
-
     /**
      * Show the application dashboard.
      *
@@ -35,4 +25,5 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
 }
